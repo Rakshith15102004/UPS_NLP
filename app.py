@@ -23,7 +23,7 @@ app.add_middleware(
 
 # Load Whisper model once at startup
 print("Loading Whisper model... Please wait 5–10 seconds.")
-model = whisper.load_model("small")  # Best for Indian languages
+model = whisper.load_model("tiny")  # Best for Indian languages
 
 # --------------------------------------------------------
 # TEXT INPUT API
@@ -67,3 +67,4 @@ async def analyze_audio(file: UploadFile = File(...)):
 @app.get("/")
 def home():
     return {"message": "Medical Analyzer API Running! Visit /docs for Swagger UI."}
+
