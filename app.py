@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
-import whisper
 import os
+from faster_whisper import WhisperModel 
 
 # Import your medical NLP pipeline
 from Input_handling import medical_pipeline
@@ -21,9 +21,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load Whisper model once at startup
-print("Loading Whisper model... Please wait 5–10 seconds.")
-model = whisper.load_model("tiny")  # Best for Indian languages
+# --------------------------------------------------------
+# NEW: Load Model Efficiently (Uses ~200MB RAM)
+# --------------------------------------------------------
+print("Loading Faster-Whisper model...")
+# 'cpu' + 'int8' is the secret combo for Free Tier
+model = WhisperModel("tiny", device="cpu", compute_type="int8") 
 
 # --------------------------------------------------------
 # TEXT INPUT API
@@ -42,21 +45,24 @@ async def analyze_text(text: str = Form(...)):
 # --------------------------------------------------------
 @app.post("/analyze-audio/")
 async def analyze_audio(file: UploadFile = File(...)):
-    # Save uploaded audio
+    # 1. Save uploaded audio temporarily
     file_path = f"temp_{file.filename}"
     with open(file_path, "wb") as f:
         f.write(await file.read())
 
-    # Whisper transcription
+    # 2. Transcribe using Faster-Whisper
     print("Transcribing audio...")
-    output = model.transcribe(file_path, fp16=False)
-    text = output["text"]
+    segments, info = model.transcribe(file_path, beam_size=5)
+    
+    # Join the segments into one string
+    text = " ".join([segment.text for segment in segments])
 
-    # Process text
+    # 3. Analyze symptoms
     result = medical_pipeline(text)
 
-    # Cleanup
-    os.remove(file_path)
+    # 4. Cleanup temp file
+    if os.path.exists(file_path):
+        os.remove(file_path)
 
     return {
         "input_type": "audio",
@@ -67,4 +73,3 @@ async def analyze_audio(file: UploadFile = File(...)):
 @app.get("/")
 def home():
     return {"message": "Medical Analyzer API Running! Visit /docs for Swagger UI."}
-
