@@ -1,9 +1,8 @@
 fastapi
 uvicorn
-openai-whisper
+faster-whisper
 deep-translator
 langdetect
 nltk
 python-multipart
-torch
 numpy
