@@ -1,0 +1,88 @@
+{
+  "Cardiology": {
+    "chest pain": "Myocardial Infarction (Heart Attack)",
+    "heart": "Coronary Artery Disease / Angina",
+    "palpitation": "Arrhythmia / Atrial Fibrillation",
+    "faint": "Cardiac Syncope",
+    "swelling": "Heart Failure (Edema)",
+    "pressure": "Angina Pectoris"
+  },
+  "Neurology": {
+    "stroke": "Ischemic or Hemorrhagic Stroke",
+    "paralysis": "Stroke / Spinal Cord Injury",
+    "headache": "Migraine / Tension Headache / Cluster Headache",
+    "seizure": "Epilepsy / Seizure Disorder",
+    "memory": "Dementia / Alzheimer's",
+    "dizzy": "Vertigo / BPPV",
+    "numbness": "Neuropathy / Multiple Sclerosis"
+  },
+  "Pulmonology": {
+    "asthma": "Bronchial Asthma",
+    "breath": "COPD / Asthma / Pneumonia",
+    "wheez": "Acute Asthma Attack",
+    "cough": "Bronchitis / Tuberculosis",
+    "pneumonia": "Pneumonia",
+    "sputum": "Lower Respiratory Tract Infection"
+  },
+  "Gastroenterology": {
+    "stomach": "Gastritis / Ulcer / Gastroenteritis",
+    "acid": "GERD (Acid Reflux)",
+    "vomit": "Food Poisoning / Gastritis",
+    "diarrhea": "Gastroenteritis / IBS",
+    "liver": "Hepatitis / Liver Cirrhosis",
+    "appendix": "Appendicitis",
+    "blood": "GI Bleeding / Ulcer"
+  },
+  "Orthopedics": {
+    "fracture": "Bone Fracture",
+    "break": "Bone Fracture",
+    "back": "Spondylitis / Herniated Disc",
+    "knee": "Osteoarthritis / Ligament Tear (ACL)",
+    "joint": "Rheumatoid Arthritis",
+    "neck": "Cervical Spondylosis",
+    "accident": "Multiple Fractures / Trauma"
+  },
+  "Emergency": {
+    "accident": "Polytrauma / Road Traffic Accident Injury",
+    "burn": "Thermal or Chemical Burns",
+    "poison": "Acute Poisoning / Toxicology",
+    "bite": "Animal Bite / Rabies Risk",
+    "cut": "Deep Laceration / Hemorrhage",
+    "fall": "Blunt Force Trauma",
+    "shock": "Hypovolemic / Anaphylactic Shock"
+  },
+  "ENT": {
+    "nose": "Epistaxis (Nose Bleed) / Sinusitis / Nasal Trauma",
+    "ear": "Otitis Media (Ear Infection) / Wax Impaction",
+    "throat": "Tonsillitis / Pharyngitis",
+    "vertigo": "Inner Ear Issue",
+    "sinus": "Acute Sinusitis"
+  },
+  "Ophthalmology": {
+    "vision": "Refractive Error / Cataract / Glaucoma",
+    "eye": "Conjunctivitis / Corneal Abrasion",
+    "redness": "Conjunctivitis (Pink Eye)"
+  },
+  "Dermatology": {
+    "acne": "Acne Vulgaris",
+    "rash": "Dermatitis / Fungal Infection / Allergic Reaction",
+    "eczema": "Atopic Dermatitis",
+    "hair": "Alopecia",
+    "fungal": "Tinea Infection"
+  },
+  "Nephrology": {
+    "stone": "Kidney Stones (Renal Calculi)",
+    "urine": "Urinary Tract Infection (UTI)",
+    "kidney": "Acute/Chronic Kidney Disease"
+  },
+  "Gynecology": {
+    "period": "Dysmenorrhea / Menstrual Disorder",
+    "pregnan": "Pregnancy Checkup / Complications",
+    "cramp": "PCOS / Endometriosis",
+    "bleed": "Dysfunctional Uterine Bleeding"
+  },
+  "Dental": {
+    "tooth": "Dental Caries / Pulpitis",
+    "gum": "Gingivitis / Periodontitis"
+  }
+}

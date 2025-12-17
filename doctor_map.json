@@ -1,0 +1,17 @@
+{
+  "Cardiology": "Cardiologist",
+  "Neurology": "Neurologist",
+  "Pulmonology": "Pulmonologist",
+  "Gastroenterology": "Gastroenterologist",
+  "Orthopedics": "Orthopedic Surgeon",
+  "Emergency": "Emergency Physician / Trauma Surgeon",
+  "ENT": "ENT Specialist (Otolaryngologist)",
+  "Ophthalmology": "Ophthalmologist",
+  "Dermatology": "Dermatologist",
+  "Nephrology": "Nephrologist",
+  "Gynecology": "Gynecologist / Obstetrician",
+  "Pediatrics": "Pediatrician",
+  "Psychiatry": "Psychiatrist",
+  "Dental": "Dentist / Oral Surgeon",
+  "General": "General Physician"
+}
